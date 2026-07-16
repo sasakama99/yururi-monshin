@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>ゆるり整体院ステップ カルテシステム</title>
+  <style>
+    :root {
+      --bg: #f5f1e8;
+      --card: #ffffff;
+      --ink: #3a3a34;
+      --ink-soft: #6b6b60;
+      --green: #5c8a5c;
+      --green-deep: #47704a;
+      --green-pale: #e8f0e3;
+      --line: #d8d2c4;
+      --radius: 16px;
+    }
+    * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+    html, body {
+      margin: 0; padding: 0; min-height: 100%;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+      font-size: 18px; line-height: 1.7;
+      -webkit-text-size-adjust: 100%;
+    }
+    .wrap { max-width: 620px; margin: 0 auto; padding: 0 18px 60px; }
+    header {
+      background: linear-gradient(135deg, var(--green) 0%, var(--green-deep) 100%);
+      color: #fff; padding: 34px 20px; text-align: center;
+      border-radius: 0 0 var(--radius) var(--radius);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    header h1 { margin: 0; font-size: 30px; letter-spacing: 0.05em; }
+    header p { margin: 10px 0 0; font-size: 16px; opacity: 0.92; letter-spacing: 0.08em; }
+
+    .menu { margin-top: 30px; display: flex; flex-direction: column; gap: 18px; }
+    .menu-btn {
+      display: flex; align-items: center; gap: 18px;
+      min-height: 96px;
+      background: var(--card);
+      border: 2px solid var(--line);
+      border-radius: var(--radius);
+      padding: 18px 22px;
+      text-decoration: none;
+      color: var(--ink);
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      transition: transform 0.08s, box-shadow 0.12s, border-color 0.12s;
+    }
+    .menu-btn:active {
+      transform: scale(0.985);
+      border-color: var(--green);
+      box-shadow: 0 2px 6px rgba(92,138,92,0.25);
+    }
+    .menu-btn .ico {
+      flex: 0 0 auto;
+      width: 60px; height: 60px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 34px;
+      background: var(--green-pale);
+      border-radius: 14px;
+    }
+    .menu-btn .txt { flex: 1 1 auto; min-width: 0; }
+    .menu-btn .ttl { display: block; font-size: 22px; font-weight: 800; color: var(--green-deep); letter-spacing: 0.02em; }
+    .menu-btn .sub { display: block; font-size: 14px; color: var(--ink-soft); margin-top: 3px; }
+    .menu-btn .arrow { flex: 0 0 auto; font-size: 24px; color: var(--line); font-weight: 700; }
+
+    footer { text-align: center; margin-top: 34px; font-size: 13px; color: var(--ink-soft); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>ゆるり整体院ステップ</h1>
+      <p>カルテシステム</p>
+    </header>
+
+    <nav class="menu">
+      <a class="menu-btn" href="index.html">
+        <span class="ico">📝</span>
+        <span class="txt">
+          <span class="ttl">カルテ入力（問診票）</span>
+          <span class="sub">お客様に記入していただく問診票</span>
+        </span>
+        <span class="arrow">›</span>
+      </a>
+
+      <a class="menu-btn" href="staff.html">
+        <span class="ico">🔍</span>
+        <span class="txt">
+          <span class="ttl">カルテ検索</span>
+          <span class="sub">院長用・過去のカルテ／来院記録</span>
+        </span>
+        <span class="arrow">›</span>
+      </a>
+
+      <a class="menu-btn" href="https://script.google.com/macros/s/AKfycbw5epVOPzEiAj_NHxovmV0Y-KUlH5gk7qFQpK3B4GLTzgyws59R5gNRnyg39w9-y6ub/exec?page=csv">
+        <span class="ico">📥</span>
+        <span class="txt">
+          <span class="ttl">エアレジCSV出力</span>
+          <span class="sub">お客様データをエアレジ用CSVに書き出し</span>
+        </span>
+        <span class="arrow">›</span>
+      </a>
+    </nav>
+
+    <footer>ゆるり整体院ステップ</footer>
+  </div>
+</body>
+</html>
